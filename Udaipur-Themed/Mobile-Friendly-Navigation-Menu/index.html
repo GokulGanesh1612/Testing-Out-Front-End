@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Udaipur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fef6e4;
+      color: #264653;
+    }
+
+    header {
+      background-color: #2a9d8f;
+      padding: 15px 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 2;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    #nav-toggle {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #2a9d8f;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 15px 0;
+        z-index: 1;
+      }
+
+      #nav-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .main-content {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .main-content h1 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
+
+    .main-content p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .udaipur-image {
+      margin-top: 30px;
+    }
+
+    .udaipur-image img {
+      width: 90%;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Explore Udaipur</h2>
+
+    <input type="checkbox" id="nav-toggle" />
+    <label class="hamburger" for="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="main-content">
+    <h1>Welcome to the City of Lakes 🌊</h1>
+    <p>
+      Udaipur is a crown jewel of Rajasthan, where royal architecture meets tranquil waters.
+      Wander through marble corridors, float on serene lakes, and get lost in the colors of local bazaars.
+    </p>
+
+    <div class="udaipur-image">
+      <img src="./udaipur-india.jpg" alt="Udaipur City and Lake View">
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Udaipur</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #3e3e3e;
+    }
+    header {
+      background-color: #e9c46a;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.8em;
+      margin: 0;
+      color: #264653;
+    }
+    p {
+      font-size: 18px;
+      margin: 20px auto;
+      max-width: 700px;
+    }
+    img {
+      width: 320px;
+      border-radius: 10px;
+      margin: 25px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .btn {
+      background-color: #e76f51;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #d35445;
+    }
+    footer {
+      background-color: #264653;
+      color: #ffffff;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Udaipur 🌊🏰</h1>
+    <p>Discover the beauty, culture, and history of Rajasthan’s most romantic city — nestled between lakes and majestic palaces.</p>
+  </header>
+
+  <img src="./images/udaipur-city-palace.jpeg" alt="Udaipur City Palace View">
+
+  <p>From the stunning City Palace to tranquil boat rides on Lake Pichola and the vibrant streets of the old town, Udaipur blends tradition, art, and warmth into every corner. Let your journey begin here.</p>
+
+  <button class="btn" id="colorToggleBtn" onclick="changeColor()">Click to Change My Color</button>
+
+  <footer>
+    &copy; 2025 Explore Udaipur. Made with ❤️ by Gokul.
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("colorToggleBtn");
+    let toggled = false;
+
+    function changeColor() {
+      toggled = !toggled;
+      toggleBtn.style.backgroundColor = toggled ? "#f4a261" : "#e76f51";
+    }
+  </script>
+
+</body>
+</html>
